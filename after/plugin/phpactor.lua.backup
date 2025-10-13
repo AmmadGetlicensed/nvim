@@ -1,0 +1,12 @@
+require('lspconfig').phpactor.setup{
+    cmd = { "nc", "localhost", "9912" }, -- or local binary
+    root_dir = require('lspconfig.util').root_pattern("composer.json", ".git"),
+    settings = {
+        phpactor = {
+            files = {
+                exclude = { "vendor" }  -- <-- exclude vendor folder
+            }
+        }
+    }
+}
+

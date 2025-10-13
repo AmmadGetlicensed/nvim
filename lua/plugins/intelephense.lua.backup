@@ -1,0 +1,21 @@
+return {
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        intelephense = {
+          cmd = { "intelephense", "--stdio" },
+          root_dir = require("lspconfig.util").root_pattern("composer.json", ".git"),
+          settings = {
+            intelephense = {
+              files = {
+                exclude = { "vendor/**", "storage/**", "node_modules/**" },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+
