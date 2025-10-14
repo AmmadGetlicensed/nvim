@@ -11,3 +11,7 @@ vim.keymap.set("n", "<leader>sv", function()
   builtin.lsp_document_symbols({ symbols = { "Variable", "Field" } })
 end, { desc = "Search variables (current file)" })
 
+
+vim.keymap.set("n", "<leader>ln", function()
+  vim.opt.relativenumber = not vim.opt.relativenumber:get()
+end, { desc = "Toggle relative line numbers" })

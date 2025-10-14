@@ -9,3 +9,7 @@ vim.opt.foldenable = true
 vim.opt.foldcolumn = "1"  -- Add this line
 -- vim.opt.grepprg = "rg --vimgrep --no-heading --smart-case --fixed-strings"
 vim.g.lazyvim_php_lsp = "intelephense"
+
+
+
+
