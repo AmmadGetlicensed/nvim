@@ -1,0 +1,11 @@
+return {
+  "andymass/vim-matchup",
+  event = "BufReadPost",
+  config = function()
+    vim.g.matchup_matchparen_offscreen = { method = "popup" } -- show match location when off-screen
+    vim.g.matchup_matchparen_deferred = 1                     -- async matching (reduces flicker)
+    vim.g.matchup_matchparen_timeout = 100                    -- timeout for match highlighting
+    vim.g.matchup_matchparen_hi_surround_always = 1
+  end,
+}
+
